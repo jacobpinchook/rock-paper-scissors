@@ -5,9 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script type="text/javascript" src="./script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
-    <input type = "button" onclick = "game()" value = "Play">
+    <div class="header">
+        <h1 class="title">Rock Paper Scissors</h1>
+    </div>
+
+    <main class="main">
+
+        <div class="scoreboard">
+            <h2 class="score-info" id="scoreInfo">Choose your weapon</h2>
+            <h3 class="score-message" id="scoreMessage">
+              First to score 5 points wins the game
+            </h3>
+            <div class="scores-container">
+              <div class="score-box">
+                <div class="sign" id="playerSign">❔</div>
+                <p class="score" id="playerScore">Player: 0</p>
+              </div>
+              <div class="score-box">
+                <div class="sign" id="computerSign">❔</div>
+                <p class="score" id="computerScore">Computer: 0</p>
+              </div>
+            </div>
+          </div>
+
+        <div class="buttons">
+            <button class="btn btn-square" id="rockBtn">
+                <div class="icon"><img src="./rock.png"></div>
+            </button>
+            <button class="btn btn-square" id="paperBtn">
+                <div class="icon"><img src="./paper.png"></div>
+            </button>
+            <button class="btn btn-square" id="scissorsBtn">
+                <div class="icon"><img src="./scissors.png"></div>
+            </button>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          jacobpinchook
+        </p>
+        <a href="https://github.com/jacobpinchook" target="_blank">
+          <i class="fab fa-github"></i
+        ></a>
+    </footer>
+    <div class="modal" id="endgameModal">
+      <p class="modal-title" id="endgameMsg"></p>
+      <button class="btn btn-restart" id="restartBtn">Play again</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="script.js"></script>
 </body>
 </html>
